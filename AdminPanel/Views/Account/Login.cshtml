@@ -1,0 +1,22 @@
+﻿@model LoginModel
+@{
+    ViewData["Title"] = "Log in";
+}
+<div class="row">
+    <div class="col-lg-5">
+        <form method="post">
+            <div class="mb-1">
+            <label asp-for="Username" class="form-label" >Username:</label>
+            <input asp-for="Username" class="form-control" />
+            </div>
+            <div class="mb-1">
+            <label asp-for="Password" class="form-label" >Password:</label>
+            <input asp-for="Password" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-primary">Log in</button>
+        </form>
+    </div>
+    <div class="col-lg-7">
+        @Html.ValidationSummary(false, "", new { @class = "text-danger mt-3" })
+    </div>
+</div>
